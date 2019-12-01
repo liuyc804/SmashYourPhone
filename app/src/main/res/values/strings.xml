@@ -15,9 +15,13 @@
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Custom Strings -->
     <string name="settings_title">Settings</string>
     <string name="empty_string" />
     <string name="sharing_title">Sharing</string>
     <string name="home_title">Home</string>
     <string name="bar_app_title_style">bold</string>
+    <string name="home_bn_help_text">Help</string>
+    <string name="home_bn_start_text">Start</string>
 </resources>

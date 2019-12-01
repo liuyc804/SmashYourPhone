@@ -45,8 +45,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_home"
+                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/colorAppBarSelectedBG"
@@ -54,7 +55,8 @@
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
-                    app:srcCompat="@drawable/ic_home_selected_48dp" />
+                    app:srcCompat="@drawable/ic_home_selected_48dp"
+                    />
 
                 <View
                     android:id="@+id/vw_divider"
@@ -71,14 +73,28 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/colorAppBarText"
                     android:textSize="@dimen/bar_app_title_size"
-                    android:textStyle="@string/bar_app_title_style"
-                    android:typeface="sans" />
+                    android:textStyle="bold" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/ic_share"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:contentDescription="@string/sharing_title"
+                    android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleX="@dimen/bar_app_ic_scale_x"
+                    android:scaleY="@dimen/bar_app_ic_scale_y"
+                    app:srcCompat="@drawable/ic_share_disabled_48dp" />
+
+                <ImageButton
                     android:id="@+id/ic_settings"
+                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/colorTransparent"
                     android:contentDescription="@string/settings_title"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleType="center"
@@ -86,21 +102,58 @@
                     android:scaleY="@dimen/bar_app_ic_scale_y"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:srcCompat="@drawable/ic_settings_clickable_48dp" />
-
-                <ImageView
-                    android:id="@+id/ic_share"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/sharing_title"
-                    android:padding="@dimen/bar_app_ic_padding"
-                    android:scaleX="@dimen/bar_app_ic_scale_x"
-                    android:scaleY="@dimen/bar_app_ic_scale_y"
-                    app:srcCompat="@drawable/ic_share_clickable_48dp" />
+                    app:srcCompat="@drawable/ic_settings_disabled_48dp" />
 
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/vw_home_ic_app"
+            android:layout_width="@dimen/ic_app_size"
+            android:layout_height="@dimen/ic_app_size"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bar_app"
+            app:layout_constraintVertical_bias="0"
+            app:srcCompat="@drawable/ic_app_1" />
+
+        <Button
+            android:id="@+id/bn_start"
+            style="@style/HomeActivityButton"
+            android:text="@string/home_bn_start_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vw_home_ic_app"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/bn_settings"
+            style="@style/HomeActivityButton"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bn_start"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/bn_help"
+            style="@style/HomeActivityButton"
+            android:layout_marginTop="16dp"
+            android:text="@string/home_bn_help_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bn_settings"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

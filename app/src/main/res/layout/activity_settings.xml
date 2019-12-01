@@ -44,10 +44,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ic_home"
+                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
                     android:contentDescription="@string/home_title"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
@@ -69,14 +71,28 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                     android:textColor="@color/colorAppBarText"
                     android:textSize="@dimen/bar_app_title_size"
-                    android:textStyle="@string/bar_app_title_style"
+                    android:textStyle="bold"
                     android:typeface="sans" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/ic_share"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:contentDescription="@string/sharing_title"
+                    android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleX="@dimen/bar_app_ic_scale_x"
+                    android:scaleY="@dimen/bar_app_ic_scale_y"
+                    app:srcCompat="@drawable/ic_share_disabled_48dp" />
+
+                <ImageButton
                     android:id="@+id/ic_settings"
+                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
                     android:background="@color/colorAppBarSelectedBG"
                     android:contentDescription="@string/settings_title"
                     android:padding="@dimen/bar_app_ic_padding"
@@ -86,16 +102,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/ic_settings_selected_48dp" />
-
-                <ImageView
-                    android:id="@+id/ic_share"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/sharing_title"
-                    android:padding="@dimen/bar_app_ic_padding"
-                    android:scaleX="@dimen/bar_app_ic_scale_x"
-                    android:scaleY="@dimen/bar_app_ic_scale_y"
-                    app:srcCompat="@drawable/ic_share_clickable_48dp" />
 
             </LinearLayout>
 

@@ -9,4 +9,6 @@
     <color name="colorAppBarSelectedBG">#003C8F</color>
     <color name="colorAppBarDisabled">#718792</color>
     <color name="colorAppBarClickable">#FFFFFF</color>
+    <color name="colorHomeButtonText">#FFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
 </resources>

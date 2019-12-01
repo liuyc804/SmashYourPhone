@@ -3,7 +3,8 @@
     <item name="bar_app_ic_scale_x" type="dimen" format="float">0.8</item>
     <item name="bar_app_ic_scale_y" type="dimen" format="float">0.8</item>
     <dimen name="bar_app_divider_size">2dp</dimen>
-    <dimen name="bar_app_title_size">24sp</dimen>
-    <dimen name="screen_boundary_size">16dp</dimen>
+    <dimen name="bar_app_title_size">20sp</dimen>
+    <dimen name="screen_boundary_size">0dp</dimen>
     <dimen name="bar_app_ic_padding">-4dp</dimen>
+    <dimen name="ic_app_size">192dp</dimen>
 </resources>
