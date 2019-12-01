@@ -5,10 +5,12 @@
     <color name="colorAccent">#5E92F3</color>
     <color name="colorAppBarDivider">#FFFFFF</color>
     <color name="colorAppBarText">#FFFFFF</color>
-    <color name="colorAppBarSelected">#5E92F3</color>
-    <color name="colorAppBarSelectedBG">#003C8F</color>
+    <color name="colorAppBarSelected">@color/colorAccent</color>
+    <color name="colorAppBarSelectedBG">@color/colorPrimaryDark</color>
     <color name="colorAppBarDisabled">#718792</color>
+    <color name="colorAppBarDisabledBG">@color/colorPrimary</color>
     <color name="colorAppBarClickable">#FFFFFF</color>
+    <color name="colorAppBarClickableBG">@color/colorAccent</color>
     <color name="colorHomeButtonText">#FFFFFF</color>
     <color name="colorTransparent">#00FFFFFF</color>
 </resources>
