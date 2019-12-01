@@ -1,9 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:id="@+id/layout_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bar_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/AppTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/layout_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="@dimen/screen_boundary_size"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="@dimen/screen_boundary_size"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ic_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAppBarSelectedBG"
+                    android:contentDescription="@string/home_title"
+                    android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleX="@dimen/bar_app_ic_scale_x"
+                    android:scaleY="@dimen/bar_app_ic_scale_y"
+                    app:srcCompat="@drawable/ic_home_selected_48dp" />
+
+                <View
+                    android:id="@+id/vw_divider"
+                    style="@style/VerticalDivider"
+                    android:layout_width="@dimen/bar_app_divider_size" />
+
+                <TextView
+                    android:id="@+id/txt_app_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/colorAppBarText"
+                    android:textSize="@dimen/bar_app_title_size"
+                    android:textStyle="@string/bar_app_title_style"
+                    android:typeface="sans" />
+
+                <ImageView
+                    android:id="@+id/ic_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:contentDescription="@string/settings_title"
+                    android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleType="center"
+                    android:scaleX="@dimen/bar_app_ic_scale_x"
+                    android:scaleY="@dimen/bar_app_ic_scale_y"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_settings_clickable_48dp" />
+
+                <ImageView
+                    android:id="@+id/ic_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/sharing_title"
+                    android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleX="@dimen/bar_app_ic_scale_x"
+                    android:scaleY="@dimen/bar_app_ic_scale_y"
+                    app:srcCompat="@drawable/ic_share_clickable_48dp" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

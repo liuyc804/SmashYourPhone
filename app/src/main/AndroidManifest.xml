@@ -9,9 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShareActivity"></activity>
-        <activity android:name=".CharacterActivity" />
-        <activity android:name=".PlayActivity" />
+        <activity
+            android:name=".ShareActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="umd.cmsc434.smashyourphone.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".CharacterActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="umd.cmsc434.smashyourphone.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".PlayActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="umd.cmsc434.smashyourphone.HomeActivity" />
+        </activity>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
@@ -23,7 +41,6 @@
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
