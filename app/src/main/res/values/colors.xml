@@ -13,4 +13,6 @@
     <color name="colorAppBarClickableBG">@color/colorAccent</color>
     <color name="colorHomeButtonText">#FFFFFF</color>
     <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorActivityDivider">#718792</color>
+    <color name="colorCharacterFG">#373737</color>
 </resources>

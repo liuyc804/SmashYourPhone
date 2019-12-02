@@ -24,4 +24,10 @@
     <string name="bar_app_title_style">bold</string>
     <string name="home_bn_help_text">Help</string>
     <string name="home_bn_start_text">Start</string>
+    <string name="character_select_text">Select your character...</string>
+    <string name="char_marmot_name">Screaming Marmot</string>
+    <string name="char_marmot_intro">A marmot that screams like human.</string>
+    <string name="char_bn_confirm_text">Confirm</string>
+    <string name="char_bn_prev_text"><![CDATA[< Prev]]></string>
+    <string name="char_bn_next_text"><![CDATA[Next >]]></string>
 </resources>

@@ -7,4 +7,5 @@
     <dimen name="screen_boundary_size">0dp</dimen>
     <dimen name="bar_app_ic_padding">-4dp</dimen>
     <dimen name="ic_app_size">192dp</dimen>
+    <dimen name="char_vw_size">256dp</dimen>
 </resources>
