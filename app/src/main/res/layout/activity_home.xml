@@ -119,7 +119,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bar_app"
             app:layout_constraintVertical_bias="0"
-            app:srcCompat="@drawable/ic_app_1" />
+            app:srcCompat="@drawable/ic_app_2" />
 
         <Button
             android:id="@+id/bn_start"
