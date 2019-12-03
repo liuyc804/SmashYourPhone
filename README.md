@@ -8,14 +8,14 @@ Create help interface.
 Create help activity.
 Create sharing interface.
 Create settings interface.
+
+## :rofl: Latest Progress
 Create gameplay interface.
 Create character selection interface.
 
-## :rofl: Latest Progress
+## :joy: Past Progresses
 Create home interface.
 Create app logo.
-
-## :joy: Past Progresses
 Create app bar design.
 Create app bar icons.
 Create theme.
