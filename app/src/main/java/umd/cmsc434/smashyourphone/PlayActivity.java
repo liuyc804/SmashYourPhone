@@ -10,29 +10,122 @@ import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.util.Random;
+
 public class PlayActivity extends AppCompatActivity {
+	private VideoView vid;
 	private VidCharPlayer vidCharPlayer = new VidCharPlayer();
+	
+	private int score = 0;
+	private Random rand = new Random();
+	private TextView txtScoreVal;
+	private View div3;
+	private View div4;
+	
+	private SensorManager sensorManager;
+	private Sensor sensor;
+	private SigMovListener sigMovListener;
+	
+	boolean paused = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_play);
 		
-		VideoView vid = findViewById(R.id.vid_char);
+		vid = findViewById(R.id.vid_char);
 		String vidPath = "android.resource://" + getPackageName() + "/" + R.raw.play_marmot_scream;
 		vid.setVideoURI(Uri.parse(vidPath));
 		vid.setZOrderOnTop(true);
+		vid.requestFocus();
 		vid.seekTo(1);
 		
-		SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-		Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
-		sensorManager.registerListener(new SigMovListener(), sensor, SensorManager.SENSOR_DELAY_NORMAL);
+		txtScoreVal = findViewById(R.id.txt_score_val);
+		div3 = findViewById(R.id.vw_divider_3);
+		div4 = findViewById(R.id.vw_divider_4);
+		
+		sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+		sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
+		sigMovListener = new SigMovListener();
+		
+		sensorManager.registerListener(sigMovListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
 	}
 	
 	public void vidCharClicked(View v) {
-		vidCharPlayer.play(225, 325);
+		if (!paused) {
+			scoreUp(100, 50);
+			vidCharPlayer.play(225, 325);
+		}
+	}
+	
+	private void scoreUp(int incrVal, int maxBonus) {
+		score += incrVal + rand.nextInt(maxBonus + 1);
+		txtScoreVal.setText(String.valueOf(score));
+		
+		int color = getResources().getColor(R.color.colorPlayScore1);
+		if (score >= 1000 + rand.nextInt(maxBonus + 1))
+			color = getResources().getColor(R.color.colorPlayScore2);
+		if (score >= 2500 + rand.nextInt(maxBonus + 1))
+			color = getResources().getColor(R.color.colorPlayScore3);
+		if (score >= 5000 + rand.nextInt(maxBonus + 1))
+			color = getResources().getColor(R.color.colorPlayScore4);
+		if (score >= 7500 + rand.nextInt(maxBonus + 1))
+			color = getResources().getColor(R.color.colorPlayScore5);
+		
+		txtScoreVal.setTextColor(color);
+		div3.setBackgroundColor(color);
+		div4.setBackgroundColor(color);
+	}
+	
+	private void scoreReset() {
+		score = 0;
+		txtScoreVal.setText(String.valueOf(score));
+		int color = getResources().getColor(R.color.colorPlayScore1);
+		txtScoreVal.setTextColor(color);
+		div3.setBackgroundColor(color);
+		div4.setBackgroundColor(color);
+	}
+	
+	public void bnRestartClicked(View v) {
+		scoreReset();
+	}
+	
+	public void bnPauseClicked(View v) {
+		Button bn = findViewById(R.id.bn_pause);
+		
+		int color = getResources().getColor(R.color.colorActivityButtonBG);
+		if (paused == false) {
+			paused = true;
+			bn.setText(R.string.play_resume);
+			sensorManager.unregisterListener(sigMovListener, sensor);
+			color = getResources().getColor(R.color.colorPlayPausedBG);
+		} else {
+			paused = false;
+			bn.setText(R.string.play_pause);
+			sensorManager.registerListener(sigMovListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
+		}
+		
+		bn.setBackgroundColor(color);
+	}
+	
+	public void bnHelpClicked(View v) {
+		// TODO
+	}
+	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		vid.seekTo(1);
 	}
 	
 	class SigMovListener implements SensorEventListener {
@@ -56,6 +149,7 @@ public class PlayActivity extends AppCompatActivity {
 			
 			if (lastMovTriggered == false && laccTotal > LACC_ACT_LIM) {
 				lastMovTriggered = true;
+				scoreUp((int)laccTotal * 10, 125);
 				vidCharPlayer.play(225, 325);
 			}
 		}

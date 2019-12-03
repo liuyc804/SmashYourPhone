@@ -24,11 +24,17 @@
     <string name="bar_app_title_style">bold</string>
     <string name="home_bn_help_text">Help</string>
     <string name="home_bn_start_text">Start</string>
-    <string name="character_select_text">Select your character...</string>
+    <string name="char_select_text">Select your character...</string>
     <string name="char_marmot_name">Screaming Marmot</string>
     <string name="char_marmot_intro">A marmot that screams like human.</string>
     <string name="char_bn_confirm_text">Confirm</string>
     <string name="char_bn_prev_text"><![CDATA[< Prev]]></string>
     <string name="char_bn_next_text"><![CDATA[Next >]]></string>
-    <string name="play_text">Get your stress relieved...</string>
+    <string name="play_text">Relieve your stress...</string>
+    <string name="play_score">Score: </string>
+    <string name="play_score_initial">0</string>
+    <string name="play_pause">Pause</string>
+    <string name="play_help">Help</string>
+    <string name="play_restart">Restart</string>
+    <string name="play_resume">Resume</string>
 </resources>

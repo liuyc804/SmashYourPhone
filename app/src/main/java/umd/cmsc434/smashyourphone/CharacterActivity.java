@@ -21,5 +21,13 @@ public class CharacterActivity extends AppCompatActivity {
 	public void openPlayActivity() {
 		Intent intent = new Intent(this, PlayActivity.class);
 		startActivity(intent);
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
+	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
 }

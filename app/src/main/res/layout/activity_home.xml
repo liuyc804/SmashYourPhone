@@ -126,8 +126,10 @@
         <Button
             android:id="@+id/bn_start"
             style="@style/HomeActivityButton"
+            android:background="@drawable/eff_bn_activity"
             android:onClick="bnStartClicked"
             android:text="@string/home_bn_start_text"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +139,8 @@
         <Button
             android:id="@+id/bn_settings"
             style="@style/HomeActivityButton"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/eff_bn_activity"
             android:text="@string/settings_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +152,8 @@
         <Button
             android:id="@+id/bn_help"
             style="@style/HomeActivityButton"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/eff_bn_activity"
             android:text="@string/home_bn_help_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -23,5 +23,13 @@ public class HomeActivity extends AppCompatActivity {
 	public void openActivityCharacter() {
 		Intent intent = new Intent(this, CharacterActivity.class);
 		startActivity(intent);
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
+	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
 }

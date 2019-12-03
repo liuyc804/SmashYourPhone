@@ -12,4 +12,10 @@ public class ShareActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_share);
 	}
 	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
 }

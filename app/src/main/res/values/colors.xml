@@ -3,17 +3,37 @@
     <color name="colorPrimary">#1565C0</color>
     <color name="colorPrimaryDark">#003C8F</color>
     <color name="colorAccent">#5E92F3</color>
-    <color name="colorAppBarDivider">#FFFFFF</color>
-    <color name="colorAppBarText">#FFFFFF</color>
+    <color name="colorSecondary">#455A64</color>
+    <color name="colorSecondaryDark">#1C313A</color>
+    <color name="colorSecondaryLight">#718792</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorDarkGray">#373737</color>
+
+    <color name="colorActivityDivider">@color/colorSecondaryLight</color>
+    <color name="colorActivityButtonBG">@color/colorSecondary</color>
+    <color name="colorActivityButtonRipple">@color/colorAccent</color>
+
+    <color name="colorAppBarDivider">@color/colorWhite</color>
+    <color name="colorAppBarText">@color/colorWhite</color>
     <color name="colorAppBarSelected">@color/colorAccent</color>
     <color name="colorAppBarSelectedBG">@color/colorPrimaryDark</color>
-    <color name="colorAppBarDisabled">#718792</color>
+    <color name="colorAppBarDisabled">@color/colorSecondaryLight</color>
     <color name="colorAppBarDisabledBG">@color/colorPrimary</color>
-    <color name="colorAppBarClickable">#FFFFFF</color>
+    <color name="colorAppBarClickable">@color/colorWhite</color>
     <color name="colorAppBarClickableBG">@color/colorAccent</color>
-    <color name="colorHomeButtonText">#FFFFFF</color>
-    <color name="colorTransparent">#00FFFFFF</color>
-    <color name="colorActivityDivider">#718792</color>
-    <color name="colorCharacterBG">#373737</color>
-    <color name="colorPlayBG">#373737</color>
+    <color name="colorAppBarClickableRipple">#2962FF</color>
+
+    <color name="colorHomeButtonText">@color/colorWhite</color>
+    <color name="colorHomeButtonBG">@color/colorSecondary</color>
+
+    <color name="colorCharacterViewBG">@color/colorDarkGray</color>
+
+    <color name="colorPlayVideoBG">@color/colorDarkGray</color>
+    <color name="colorPlayScore1">#718792</color>
+    <color name="colorPlayScore2">#6FF9FF</color>
+    <color name="colorPlayScore3">#80D6FF</color>
+    <color name="colorPlayScore4">#B085F5</color>
+    <color name="colorPlayScore5">#FF77A9</color>
+    <color name="colorPlayPausedBG">#C62828</color>
 </resources>

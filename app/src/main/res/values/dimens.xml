@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="bar_app_ic_scale_x" type="dimen" format="float">0.8</item>
-    <item name="bar_app_ic_scale_y" type="dimen" format="float">0.8</item>
+    <item name="bar_app_ic_scale_x" type="dimen" format="float">0.6</item>
+    <item name="bar_app_ic_scale_y" type="dimen" format="float">0.6</item>
     <dimen name="bar_app_divider_size">2dp</dimen>
     <dimen name="bar_app_title_size">20sp</dimen>
     <dimen name="screen_boundary_size">0dp</dimen>
     <dimen name="bar_app_ic_padding">-4dp</dimen>
     <dimen name="ic_app_size">192dp</dimen>
     <dimen name="char_vw_size">256dp</dimen>
-    <dimen name="play_vid_size">256dp</dimen>
+    <dimen name="play_vid_size">288dp</dimen>
 </resources>
