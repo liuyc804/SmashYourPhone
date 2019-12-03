@@ -114,6 +114,8 @@
             android:layout_height="@dimen/ic_app_size"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
+            android:paddingTop="-4dp"
+            android:paddingBottom="-4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +137,7 @@
         <Button
             android:id="@+id/bn_settings"
             style="@style/HomeActivityButton"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/settings_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -147,7 +149,7 @@
         <Button
             android:id="@+id/bn_help"
             style="@style/HomeActivityButton"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/home_bn_help_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -2,7 +2,9 @@ package umd.cmsc434.smashyourphone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class CharacterActivity extends AppCompatActivity {
 	
@@ -12,4 +14,12 @@ public class CharacterActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_character);
 	}
 	
+	public void bnConfirmClicked(View v) {
+		openPlayActivity();
+	}
+	
+	public void openPlayActivity() {
+		Intent intent = new Intent(this, PlayActivity.class);
+		startActivity(intent);
+	}
 }
