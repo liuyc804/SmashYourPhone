@@ -3,6 +3,7 @@ package umd.cmsc434.smashyourphone;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -62,6 +63,21 @@ public class PlayActivity extends AppCompatActivity {
 		}
 	}
 	
+	public void icHomeClicked(View V) {
+		backToHomeActivity();
+	}
+	
+	private void backToHomeActivity() {
+		Intent intent = new Intent(this, HomeActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		startActivity(intent);
+		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
+	public void bnRestartClicked(View v) {
+		scoreReset();
+	}
+	
 	private void scoreUp(int incrVal, int maxBonus) {
 		score += incrVal + rand.nextInt(maxBonus + 1);
 		txtScoreVal.setText(String.valueOf(score));
@@ -88,10 +104,6 @@ public class PlayActivity extends AppCompatActivity {
 		txtScoreVal.setTextColor(color);
 		div3.setBackgroundColor(color);
 		div4.setBackgroundColor(color);
-	}
-	
-	public void bnRestartClicked(View v) {
-		scoreReset();
 	}
 	
 	public void bnPauseClicked(View v) {

@@ -52,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/eff_bn_bar_clickable"
                     android:contentDescription="@string/home_title"
+                    android:onClick="icHomeClicked"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
