@@ -162,6 +162,20 @@
             app:layout_constraintTop_toBottomOf="@+id/bn_settings"
             app:layout_constraintVertical_bias="0.0" />
 
+        <Button
+            android:id="@+id/bn_exit"
+            style="@style/HomeActivityButton"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/eff_bn_activity_red"
+            android:onClick="bnExitClicked"
+            android:text="@string/home_bn_exit_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bn_help"
+            app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

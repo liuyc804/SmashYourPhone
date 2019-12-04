@@ -37,4 +37,5 @@
     <string name="play_help">Help</string>
     <string name="play_restart">Restart</string>
     <string name="play_resume">Resume</string>
+    <string name="home_bn_exit_text">Exit</string>
 </resources>

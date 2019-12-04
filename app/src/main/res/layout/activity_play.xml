@@ -151,13 +151,26 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:clickable="true"
             android:focusable="true"
-            android:onClick="vidCharClicked"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/vw_divider_2"
+            app:layout_constraintVertical_bias="0.0" >
+
+        </VideoView>
+
+        <Button
+            android:id="@+id/bn_vid_char"
+            android:layout_width="@dimen/play_vid_size"
+            android:layout_height="@dimen/play_vid_size"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorTransparent"
+            android:onClick="vidCharClicked"
+            app:layout_constraintBottom_toTopOf="@+id/vw_divider_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vw_divider_2"
             app:layout_constraintVertical_bias="0.0" />
 
         <View
@@ -272,7 +285,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/colorActivityButtonBG"
+            android:background="@drawable/eff_bn_activity_red"
             android:onClick="bnPauseClicked"
             android:text="@string/play_pause"
             app:layout_constraintBottom_toBottomOf="parent"

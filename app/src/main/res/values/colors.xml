@@ -13,6 +13,9 @@
     <color name="colorActivityDivider">@color/colorSecondaryLight</color>
     <color name="colorActivityButtonBG">@color/colorSecondary</color>
     <color name="colorActivityButtonRipple">@color/colorAccent</color>
+    <color name="colorActivityButtonRipple2">#6EC6FF</color>
+    <color name="colorActivityButtonRippleRed">#C62828</color>
+    <color name="colorActivityButtonRippleRed2">#FF2F52</color>
 
     <color name="colorAppBarDivider">@color/colorWhite</color>
     <color name="colorAppBarText">@color/colorWhite</color>
@@ -35,5 +38,4 @@
     <color name="colorPlayScore3">#80D6FF</color>
     <color name="colorPlayScore4">#B085F5</color>
     <color name="colorPlayScore5">#FF77A9</color>
-    <color name="colorPlayPausedBG">#C62828</color>
 </resources>

@@ -20,6 +20,10 @@ public class HomeActivity extends AppCompatActivity {
 		openActivityCharacter();
 	}
 	
+	public void bnExitClicked(View v) {
+		finishAffinity();
+	}
+	
 	public void openActivityCharacter() {
 		Intent intent = new Intent(this, CharacterActivity.class);
 		startActivity(intent);

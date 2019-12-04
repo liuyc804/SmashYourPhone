@@ -1,9 +1,11 @@
 package umd.cmsc434.smashyourphone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -31,7 +33,7 @@ public class PlayActivity extends AppCompatActivity {
 	private Sensor sensor;
 	private SigMovListener sigMovListener;
 	
-	boolean paused = false;
+	private boolean paused = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,10 @@ public class PlayActivity extends AppCompatActivity {
 	
 	public void bnRestartClicked(View v) {
 		scoreReset();
+		vid.pause();
+		vid.seekTo(1);
+		if (paused)
+			bnPauseClicked(v);
 	}
 	
 	private void scoreUp(int incrVal, int maxBonus) {
@@ -83,13 +89,13 @@ public class PlayActivity extends AppCompatActivity {
 		txtScoreVal.setText(String.valueOf(score));
 		
 		int color = getResources().getColor(R.color.colorPlayScore1);
-		if (score >= 1000 + rand.nextInt(maxBonus + 1))
+		if (score >= 1024 + rand.nextInt(maxBonus + 1))
 			color = getResources().getColor(R.color.colorPlayScore2);
-		if (score >= 2500 + rand.nextInt(maxBonus + 1))
+		if (score >= 2048 + rand.nextInt(maxBonus + 1))
 			color = getResources().getColor(R.color.colorPlayScore3);
-		if (score >= 5000 + rand.nextInt(maxBonus + 1))
+		if (score >= 4096 + rand.nextInt(maxBonus + 1))
 			color = getResources().getColor(R.color.colorPlayScore4);
-		if (score >= 7500 + rand.nextInt(maxBonus + 1))
+		if (score >= 8192 + rand.nextInt(maxBonus + 1))
 			color = getResources().getColor(R.color.colorPlayScore5);
 		
 		txtScoreVal.setTextColor(color);
@@ -108,20 +114,21 @@ public class PlayActivity extends AppCompatActivity {
 	
 	public void bnPauseClicked(View v) {
 		Button bn = findViewById(R.id.bn_pause);
-		
-		int color = getResources().getColor(R.color.colorActivityButtonBG);
+		Drawable bgToSet;
 		if (paused == false) {
 			paused = true;
 			bn.setText(R.string.play_resume);
+			bgToSet = ResourcesCompat.getDrawable(getResources(), R.drawable.eff_bn_activity_red_rev, null);
+			vid.pause();
 			sensorManager.unregisterListener(sigMovListener, sensor);
-			color = getResources().getColor(R.color.colorPlayPausedBG);
 		} else {
 			paused = false;
 			bn.setText(R.string.play_pause);
+			bgToSet = ResourcesCompat.getDrawable(getResources(), R.drawable.eff_bn_activity_red, null);
 			sensorManager.registerListener(sigMovListener, sensor, SensorManager.SENSOR_DELAY_NORMAL);
 		}
 		
-		bn.setBackgroundColor(color);
+		bn.setBackground(bgToSet);
 	}
 	
 	public void bnHelpClicked(View v) {
@@ -147,8 +154,8 @@ public class PlayActivity extends AppCompatActivity {
 		@Override
 		public void onSensorChanged(SensorEvent event) {
 			// "lacc" stands for linear acceleration.
-			final float LACC_ACT_LIM = 22.5F; // 2.25 G total acc to activate;
-			final float LACC_REC_LIM = 5.0F; // 0.5G total acc to recover.
+			final float LACC_ACT_LIM = 22.5F, // 2.25 G total acc to activate;
+									LACC_REC_LIM = 5.0F; // 0.5G total acc to recover.
 			float laccX = event.values[0],
 						laccY = event.values[1],
 						laccZ = event.values[2];
@@ -162,7 +169,7 @@ public class PlayActivity extends AppCompatActivity {
 			if (lastMovTriggered == false && laccTotal > LACC_ACT_LIM) {
 				lastMovTriggered = true;
 				scoreUp((int)laccTotal * 10, 125);
-				vidCharPlayer.play(225, 325);
+				vidCharPlayer.play(225, 300);
 			}
 		}
 		
@@ -175,7 +182,7 @@ public class PlayActivity extends AppCompatActivity {
 	
 	class VidCharPlayer {
 		
-		final long TRIG_INTV_NS = 300_000_000; // 300MS interval.
+		final long TRIG_INTV_NS = 325_000_000; // 325MS interval.
 		private long timeLastTriggered = 0;
 		
 		public boolean play(int sleepMsec, int vidStartMsec) {
