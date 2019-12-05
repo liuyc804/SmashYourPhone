@@ -1,7 +1,6 @@
 package umd.cmsc434.smashyourphone;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,14 +16,14 @@ public class HomeActivity extends AppCompatActivity {
 	}
 	
 	public void bnStartClicked(View v) {
-		openActivityCharacter();
+		openCharacterActivity();
 	}
 	
 	public void bnExitClicked(View v) {
 		finishAffinity();
 	}
 	
-	public void openActivityCharacter() {
+	public void openCharacterActivity() {
 		Intent intent = new Intent(this, CharacterActivity.class);
 		startActivity(intent);
 		setCustTransAnim();
@@ -32,6 +31,16 @@ public class HomeActivity extends AppCompatActivity {
 	
 	private void setCustTransAnim() {
 		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+	}
+	
+	public void bnSettingsClicked(View v) {
+		openSettingsActivity();
+	}
+	
+	private void openSettingsActivity() {
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
 	}
 	
 	@Override

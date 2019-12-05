@@ -35,4 +35,14 @@ public class ShareActivity extends AppCompatActivity {
 		setCustTransAnim();
 	}
 	
+	public void icSettingsClicked(View v) {
+		openSettingsActivity();
+	}
+	
+	private void openSettingsActivity() {
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
 }

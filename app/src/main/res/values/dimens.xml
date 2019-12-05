@@ -9,4 +9,6 @@
     <dimen name="ic_app_size">192dp</dimen>
     <dimen name="char_vw_size">256dp</dimen>
     <dimen name="play_vid_size">288dp</dimen>
+    <dimen name="settings_item_height">56dp</dimen>
+    <dimen name="settings_item_padding">8dp</dimen>
 </resources>

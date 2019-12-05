@@ -42,4 +42,12 @@
     <string name="play_restart">Restart</string>
     <string name="play_resume">Resume</string>
     <string name="home_bn_exit_text">Exit</string>
+    <string name="settings_general_title">General Settings</string>
+    <string name="lang_auto">System Language (Auto)</string>
+    <string name="lang_en_us">English (US)</string>
+    <string name="lang_en_uk">English (UK)</string>
+    <string name="settings_lang">Language</string>
+    <string name="settings_info_title">Information</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_about">About</string>
 </resources>

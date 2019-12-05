@@ -62,6 +62,16 @@ public class CharacterActivity extends AppCompatActivity {
 		setCustTransAnim();
 	}
 	
+	public void icSettingsClicked(View v) {
+		openSettingsActivity();
+	}
+	
+	private void openSettingsActivity() {
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
 	public void bnPrevClicked(View v) {
 		boolean prevEnabled = true,
 						nextEnabled = true;

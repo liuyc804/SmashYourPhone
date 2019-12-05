@@ -141,6 +141,7 @@
             style="@style/HomeActivityButton"
             android:layout_marginTop="12dp"
             android:background="@drawable/eff_bn_activity"
+            android:onClick="bnSettingsClicked"
             android:text="@string/settings_title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

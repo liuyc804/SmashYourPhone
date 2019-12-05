@@ -97,6 +97,7 @@
                     android:layout_marginRight="0dp"
                     android:background="@drawable/eff_bn_bar_clickable"
                     android:contentDescription="@string/settings_title"
+                    android:onClick="icSettingsClicked"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleType="center"
                     android:scaleX="@dimen/bar_app_ic_scale_x"

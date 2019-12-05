@@ -9,4 +9,14 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+
+    <string-array name="lang_entries">
+        <item>(Auto)</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="lang_values">
+        <item>auto</item>
+        <item>en</item>
+    </string-array>
 </resources>

@@ -76,6 +76,16 @@ public class PlayActivity extends AppCompatActivity {
 		setCustTransAnim();
 	}
 	
+	public void icSettingsClicked(View v) {
+		openSettingsActivity();
+	}
+	
+	private void openSettingsActivity() {
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
 	private void setCustTransAnim() {
 		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
