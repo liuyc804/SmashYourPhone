@@ -8,12 +8,13 @@ Create about activity.
 Create help interface.
 Create help activity.
 Create sharing interface.
-Create settings interface.
 
 ## :rofl: Latest Progress
-Fix compatibility issue.
+Create settings interface.
+Add more possible characters.
 
 ## :joy: Past Progresses
+Fix compatibility issue.
 Create gameplay interface.
 Create character selection interface.
 Create home interface.
