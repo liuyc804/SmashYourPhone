@@ -73,6 +73,10 @@ public class PlayActivity extends AppCompatActivity {
 		Intent intent = new Intent(this, HomeActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	private void setCustTransAnim() {
 		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
 	
@@ -138,7 +142,7 @@ public class PlayActivity extends AppCompatActivity {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+		setCustTransAnim();
 	}
 	
 	@Override
@@ -175,7 +179,7 @@ public class PlayActivity extends AppCompatActivity {
 		
 		@Override
 		public void onAccuracyChanged(Sensor sensor, int accuracy) {
-			// Do nothing.
+			// Do NOTHING.
 		}
 		
 	} // END OF class SigMovListener

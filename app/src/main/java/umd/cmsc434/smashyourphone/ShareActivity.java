@@ -17,6 +17,10 @@ public class ShareActivity extends AppCompatActivity {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
+		setCustTransAnim();
+	}
+	
+	private void setCustTransAnim() {
 		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
 	
@@ -28,7 +32,7 @@ public class ShareActivity extends AppCompatActivity {
 		Intent intent = new Intent(this, HomeActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(intent);
-		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+		setCustTransAnim();
 	}
 	
 }

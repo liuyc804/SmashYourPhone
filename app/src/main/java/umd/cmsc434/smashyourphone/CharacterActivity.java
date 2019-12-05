@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +44,10 @@ public class CharacterActivity extends AppCompatActivity {
 	private void openPlayActivity() {
 		Intent intent = new Intent(this, PlayActivity.class);
 		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	private void setCustTransAnim() {
 		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
 	}
 	
@@ -56,7 +59,7 @@ public class CharacterActivity extends AppCompatActivity {
 		Intent intent = new Intent(this, HomeActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		startActivity(intent);
-		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+		setCustTransAnim();
 	}
 	
 	public void bnPrevClicked(View v) {
@@ -97,7 +100,7 @@ public class CharacterActivity extends AppCompatActivity {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		overridePendingTransition(R.anim.activity_open, R.anim.activity_close);
+		setCustTransAnim();
 	}
 	
 	private class CharacterProfile {
