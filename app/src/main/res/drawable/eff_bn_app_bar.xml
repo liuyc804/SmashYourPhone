@@ -2,13 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/colorAppBarClickableRipple"></solid>
+            <solid android:color="@color/colorAppBarButtonRipple"></solid>
         </shape>
     </item>
 
     <item>
         <shape>
-            <solid android:color="@color/colorAppBarClickableBG"></solid>
+            <solid android:color="@color/colorTransparent"></solid>
         </shape>
     </item>
 </selector>

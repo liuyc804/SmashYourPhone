@@ -45,15 +45,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_home"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/eff_bn_bar_clickable"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/home_title"
+                    android:focusable="true"
                     android:onClick="icHomeClicked"
                     android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleType="center"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
                     app:srcCompat="@drawable/ic_home_clickable_48dp" />
@@ -76,27 +78,30 @@
                     android:textStyle="bold"
                     android:typeface="sans" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_share"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAppBarDisabledBG"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/sharing_title"
+                    android:focusable="true"
                     android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleType="center"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
                     app:srcCompat="@drawable/ic_share_disabled_48dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_settings"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
                     android:layout_marginRight="0dp"
-                    android:background="@drawable/eff_bn_bar_clickable"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/settings_title"
+                    android:focusable="true"
                     android:onClick="icSettingsClicked"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleType="center"

@@ -45,18 +45,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_home"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAppBarSelectedBG"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/home_title"
+                    android:focusable="true"
                     android:padding="@dimen/bar_app_ic_padding"
+                    android:scaleType="center"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
-                    app:srcCompat="@drawable/ic_home_selected_48dp"
-                    />
+                    app:srcCompat="@drawable/ic_home_selected_48dp" />
 
                 <View
                     android:id="@+id/vw_divider"
@@ -75,27 +77,29 @@
                     android:textSize="@dimen/bar_app_title_size"
                     android:textStyle="bold" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_share"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAppBarDisabledBG"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/sharing_title"
+                    android:focusable="true"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
                     android:scaleY="@dimen/bar_app_ic_scale_y"
                     app:srcCompat="@drawable/ic_share_disabled_48dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/ic_settings"
-                    style="@style/Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
                     android:layout_marginRight="0dp"
-                    android:background="@color/colorAppBarDisabledBG"
+                    android:background="@drawable/eff_bn_app_bar"
+                    android:clickable="true"
                     android:contentDescription="@string/settings_title"
+                    android:focusable="true"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleType="center"
                     android:scaleX="@dimen/bar_app_ic_scale_x"
@@ -125,7 +129,7 @@
 
         <Button
             android:id="@+id/bn_start"
-            style="@style/HomeActivityButton"
+            style="@style/HomeButton"
             android:background="@drawable/eff_bn_activity"
             android:onClick="bnStartClicked"
             android:text="@string/home_bn_start_text"
@@ -138,7 +142,7 @@
 
         <Button
             android:id="@+id/bn_settings"
-            style="@style/HomeActivityButton"
+            style="@style/HomeButton"
             android:layout_marginTop="12dp"
             android:background="@drawable/eff_bn_activity"
             android:onClick="bnSettingsClicked"
@@ -152,7 +156,7 @@
 
         <Button
             android:id="@+id/bn_help"
-            style="@style/HomeActivityButton"
+            style="@style/HomeButton"
             android:layout_marginTop="12dp"
             android:background="@drawable/eff_bn_activity"
             android:text="@string/home_bn_help_text"
@@ -165,7 +169,7 @@
 
         <Button
             android:id="@+id/bn_exit"
-            style="@style/HomeActivityButton"
+            style="@style/HomeButton"
             android:layout_marginTop="12dp"
             android:background="@drawable/eff_bn_activity_red"
             android:onClick="bnExitClicked"

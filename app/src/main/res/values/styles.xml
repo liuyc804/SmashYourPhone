@@ -18,7 +18,7 @@
         <item name="android:layout_marginLeft">4dp</item>
     </style>
 
-    <style name="HomeActivityButton">
+    <style name="HomeButton">
         <item name="android:background">@color/colorHomeButtonBG</item>
         <item name="android:layout_width">128dp</item>
         <item name="android:layout_height">48dp</item>
@@ -30,6 +30,38 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">2dp</item>
         <item name="android:background">@color/colorActivityDivider</item>
+    </style>
+
+    <style name="SettingsItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/settings_item_height</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/eff_item_settings</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingLeft">@dimen/settings_item_padding</item>
+        <item name="android:paddingRight">@dimen/settings_item_padding</item>
+    </style>
+
+    <style name="SettingsCategory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

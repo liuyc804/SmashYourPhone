@@ -20,12 +20,9 @@
     <color name="colorAppBarDivider">@color/colorWhite</color>
     <color name="colorAppBarText">@color/colorWhite</color>
     <color name="colorAppBarSelected">@color/colorAccent</color>
-    <color name="colorAppBarSelectedBG">@color/colorPrimaryDark</color>
     <color name="colorAppBarDisabled">@color/colorSecondaryLight</color>
-    <color name="colorAppBarDisabledBG">@color/colorPrimary</color>
     <color name="colorAppBarClickable">@color/colorWhite</color>
-    <color name="colorAppBarClickableBG">@color/colorAccent</color>
-    <color name="colorAppBarClickableRipple">#2962FF</color>
+    <color name="colorAppBarButtonRipple">@color/colorAccent</color>
 
     <color name="colorHomeButtonText">@color/colorWhite</color>
     <color name="colorHomeButtonBG">@color/colorSecondary</color>
