@@ -8,6 +8,8 @@ Create about activity.
 Create help interface.
 Create help activity.
 Create sharing interface.
+Create language interface.
+Improve app bar UI components.
 
 ## :rofl: Latest Progress
 Create settings interface.
@@ -15,6 +17,7 @@ Add more possible characters.
 
 ## :joy: Past Progresses
 Fix compatibility issue.
+Add gameplay interaction code.
 Create gameplay interface.
 Create character selection interface.
 Create home interface.
