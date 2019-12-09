@@ -18,6 +18,36 @@ public class SettingsActivity extends AppCompatActivity {
 		
 	}
 	
+	public void settingsLangClicked(View v) {
+		openSettingsLanguageActivity();
+	}
+	
+	private void openSettingsLanguageActivity() {
+		Intent intent = new Intent(this, SettingsLanguageActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	public void settingsAboutClicked(View v) {
+		openSettingsAboutActivity();
+	}
+	
+	private void openSettingsAboutActivity() {
+		Intent intent = new Intent(this, SettingsAboutActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	public void settingsHelpClicked(View v) {
+		openSettingsHelpActivity();
+	}
+	
+	private void openSettingsHelpActivity() {
+		Intent intent = new Intent(this, SettingsHelpActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();

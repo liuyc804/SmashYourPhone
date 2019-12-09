@@ -12,4 +12,5 @@
     <dimen name="play_vid_size">288dp</dimen>
     <dimen name="settings_item_height">48dp</dimen>
     <dimen name="settings_item_padding">8dp</dimen>
+    <dimen name="bn_round_padding">2dp</dimen>
 </resources>

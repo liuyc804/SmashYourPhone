@@ -146,7 +146,13 @@ public class PlayActivity extends AppCompatActivity {
 	}
 	
 	public void bnHelpClicked(View v) {
-		// TODO
+		openSettingsHelpActivity();
+	}
+	
+	private void openSettingsHelpActivity() {
+		Intent intent = new Intent(this, SettingsHelpActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
 	}
 	
 	@Override

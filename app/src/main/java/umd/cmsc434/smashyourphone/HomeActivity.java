@@ -19,10 +19,6 @@ public class HomeActivity extends AppCompatActivity {
 		openCharacterActivity();
 	}
 	
-	public void bnExitClicked(View v) {
-		finishAffinity();
-	}
-	
 	public void openCharacterActivity() {
 		Intent intent = new Intent(this, CharacterActivity.class);
 		startActivity(intent);
@@ -41,6 +37,20 @@ public class HomeActivity extends AppCompatActivity {
 		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
 		setCustTransAnim();
+	}
+	
+	public void bnHelpClicked(View v) {
+		openSettingsHelpActivity();
+	}
+	
+	private void openSettingsHelpActivity() {
+		Intent intent = new Intent(this, SettingsHelpActivity.class);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	public void bnExitClicked(View v) {
+		finishAffinity();
 	}
 	
 	@Override

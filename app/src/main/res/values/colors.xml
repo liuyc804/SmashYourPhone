@@ -16,6 +16,7 @@
     <color name="colorActivityButtonRipple2">#6EC6FF</color>
     <color name="colorActivityButtonRippleRed">#C62828</color>
     <color name="colorActivityButtonRippleRed2">#FF2F52</color>
+    <color name="colorActivityButtonRoundRipple">@color/colorAccent</color>
 
     <color name="colorAppBarDivider">@color/colorWhite</color>
     <color name="colorAppBarText">@color/colorWhite</color>

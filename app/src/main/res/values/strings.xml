@@ -43,11 +43,22 @@
     <string name="play_resume">Resume</string>
     <string name="home_bn_exit_text">Exit</string>
     <string name="settings_general_title">General Settings</string>
-    <string name="lang_auto">System Language (Auto)</string>
-    <string name="lang_en_us">English (US)</string>
-    <string name="lang_en_uk">English (UK)</string>
     <string name="settings_lang">Language</string>
     <string name="settings_info_title">App Information</string>
     <string name="settings_help">Help</string>
     <string name="settings_about">About</string>
+    <string name="lang_title">Language</string>
+    <string name="vw_back_arrow">Back Arrow</string>
+    <string name="lang_all_title">Available Languages</string>
+    <string name="lang_en">English</string>
+    <string name="about_ver_info">Version Information</string>
+    <string name="ver_curr">Current Version</string>
+    <string name="ver_curr_val">[version]</string>
+    <string name="help_howto">How to play ?</string>
+    <string name="howto_title">Triggering character video or audio effects...</string>
+    <string name="howto_content">
+    1. Start, select character, and then confirm.
+    2. Swing, drop, or shake the phone. Or, alternatively, click on the character.
+    3. The effects will take place. Do not forget to turn up the volume to hear the audio effect!
+    </string>
 </resources>
