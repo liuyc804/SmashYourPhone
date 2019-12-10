@@ -6,6 +6,9 @@ A stress-relieving application (hi-fi interactive prototype).
 Create sharing interface.
 
 ## :rofl: Latest Progress
+Support 2 more characters.
+
+## :joy: Past Progresses
 Create about interface.
 Create about activity.
 Create help interface.
@@ -13,8 +16,6 @@ Create help activity.
 Create settings interface.
 Create language interface.
 Create language activity.
-
-## :joy: Past Progresses
 Add more possible characters.
 Improve app bar UI components.
 Fix compatibility issue.
