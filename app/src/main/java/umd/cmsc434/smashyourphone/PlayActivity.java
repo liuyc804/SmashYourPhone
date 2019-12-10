@@ -17,11 +17,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class PlayActivity extends AppCompatActivity {
 	private VideoView vid;
 	private VidCharPlayer vidCharPlayer = new VidCharPlayer();
+	private String resDir;
+	private ArrayList<String> vidPaths;
+	private int selectedChar;
 	
 	private int score = 0;
 	private Random rand = new Random();
@@ -42,25 +46,17 @@ public class PlayActivity extends AppCompatActivity {
 		
 		vid = findViewById(R.id.vid_char);
 		Intent intent = getIntent();
-		int selectedChar = intent.getIntExtra("selected_char", 1);
-		String vidPath = "";
+		selectedChar = intent.getIntExtra("selected_char", 1);
+		resDir = "android.resource://" + getPackageName() + "/";
+		vidPaths = new ArrayList<>();
+		vidPaths.add(resDir + R.raw.giraffe_yell);
+		vidPaths.add(resDir + R.raw.marmot_scream);
+		vidPaths.add(resDir + R.raw.emu_oof);
 
-		if(selectedChar == 0){
-			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.giraffe_yell;
-		}
-
-		else if(selectedChar == 1){
-			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.play_marmot_scream;
-			vid.seekTo(1);
-		}
-
-		else if(selectedChar == 2){
-			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.emu_oof;
-		}
-
-		vid.setVideoURI(Uri.parse(vidPath));
+		vid.setVideoURI(Uri.parse(vidPaths.get(selectedChar)));
 		vid.setZOrderOnTop(true);
 		vid.requestFocus();
+		vid.seekTo(1);
 		
 		txtScoreVal = findViewById(R.id.txt_score_val);
 		div3 = findViewById(R.id.vw_divider_3);
@@ -107,10 +103,17 @@ public class PlayActivity extends AppCompatActivity {
 	
 	public void bnRestartClicked(View v) {
 		scoreReset();
+		vidReset();
 		vid.pause();
 		vid.seekTo(1);
 		if (paused)
 			bnPauseClicked(v);
+	}
+	
+	private void vidReset() {
+		vid.stopPlayback();
+		vid.setVideoURI(Uri.parse(vidPaths.get(selectedChar)));
+		vid.seekTo(1);
 	}
 	
 	private void scoreUp(int incrVal, int maxBonus) {
@@ -230,7 +233,7 @@ public class PlayActivity extends AppCompatActivity {
 		}
 		
 		private void playActual(int sleepMsec, int vidStartMsec) {
-			VideoView vid = findViewById(R.id.vid_char);
+			vidReset();
 			try { Thread.sleep(sleepMsec); } catch (Exception e) {}
 			vid.seekTo(vidStartMsec);
 			vid.start();
