@@ -41,11 +41,26 @@ public class PlayActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_play);
 		
 		vid = findViewById(R.id.vid_char);
-		String vidPath = "android.resource://" + getPackageName() + "/" + R.raw.play_marmot_scream;
+		Intent intent = getIntent();
+		int selectedChar = intent.getIntExtra("selected_char", 1);
+		String vidPath = "";
+
+		if(selectedChar == 0){
+			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.giraffe_yell;
+		}
+
+		else if(selectedChar == 1){
+			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.play_marmot_scream;
+			vid.seekTo(1);
+		}
+
+		else if(selectedChar == 2){
+			vidPath = "android.resource://" + getPackageName() + "/" + R.raw.emu_oof;
+		}
+
 		vid.setVideoURI(Uri.parse(vidPath));
 		vid.setZOrderOnTop(true);
 		vid.requestFocus();
-		vid.seekTo(1);
 		
 		txtScoreVal = findViewById(R.id.txt_score_val);
 		div3 = findViewById(R.id.vw_divider_3);

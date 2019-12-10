@@ -25,9 +25,9 @@ public class CharacterActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_character);
 		
 		chars = new ArrayList<>();
-		chars.add(new CharacterProfile(R.drawable.ic_char_giraffe, R.string.char_giraffe_name, R.string.char_giraffe_intro, false));
+		chars.add(new CharacterProfile(R.drawable.ic_char_giraffe, R.string.char_giraffe_name, R.string.char_giraffe_intro, true));
 		chars.add(new CharacterProfile(R.drawable.ic_char_marmot, R.string.char_marmot_name, R.string.char_marmot_intro, true));
-		chars.add(new CharacterProfile(R.drawable.ic_char_emu, R.string.char_emu_name, R.string.char_emu_intro, false));
+		chars.add(new CharacterProfile(R.drawable.ic_char_emu, R.string.char_emu_name, R.string.char_emu_intro, true));
 		bnPrev = findViewById(R.id.bn_prev);
 		bnNext = findViewById(R.id.bn_next);
 		bnConfirm = findViewById(R.id.bn_confirm);
@@ -43,6 +43,7 @@ public class CharacterActivity extends AppCompatActivity {
 	
 	private void openPlayActivity() {
 		Intent intent = new Intent(this, PlayActivity.class);
+		intent.putExtra("selected_char", charIdx);
 		startActivity(intent);
 		setCustTransAnim();
 	}
