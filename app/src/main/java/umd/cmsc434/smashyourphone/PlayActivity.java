@@ -113,7 +113,6 @@ public class PlayActivity extends AppCompatActivity {
 	private void vidReset() {
 		vid.stopPlayback();
 		vid.setVideoURI(Uri.parse(vidPaths.get(selectedChar)));
-		vid.seekTo(1);
 	}
 	
 	private void scoreUp(int incrVal, int maxBonus) {
@@ -207,7 +206,7 @@ public class PlayActivity extends AppCompatActivity {
 			if (lastMovTriggered == false && laccTotal > LACC_ACT_LIM) {
 				lastMovTriggered = true;
 				scoreUp((int)laccTotal * 10, 125);
-				vidCharPlayer.play(225, 300);
+				vidCharPlayer.play(250, 300);
 			}
 		}
 		
