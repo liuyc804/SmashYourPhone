@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/eff_bn_app_bar"
                     android:clickable="true"
-                    android:contentDescription="@string/sharing_title"
+                    android:contentDescription="@string/share_title"
                     android:focusable="true"
                     android:padding="@dimen/bar_app_ic_padding"
                     android:scaleType="center"

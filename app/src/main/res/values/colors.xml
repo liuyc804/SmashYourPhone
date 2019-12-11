@@ -36,4 +36,6 @@
     <color name="colorPlayScore3">#80D6FF</color>
     <color name="colorPlayScore4">#B085F5</color>
     <color name="colorPlayScore5">#FF77A9</color>
+
+    <color name="colorShareBG">@color/colorDarkGray</color>
 </resources>

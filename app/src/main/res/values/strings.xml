@@ -19,7 +19,7 @@
     <!-- Custom Strings -->
     <string name="settings_title">Settings</string>
     <string name="empty_string" />
-    <string name="sharing_title">Sharing</string>
+    <string name="share_title">Share</string>
     <string name="home_title">Home</string>
     <string name="bar_app_title_style">bold</string>
     <string name="home_bn_help_text">Help</string>
@@ -34,7 +34,7 @@
     <string name="char_bn_confirm_text">Confirm</string>
     <string name="char_bn_prev_text"><![CDATA[< Prev]]></string>
     <string name="char_bn_next_text"><![CDATA[Next >]]></string>
-    <string name="play_text">Relieve your stress...</string>
+    <string name="play_title">Relieve your stress...</string>
     <string name="play_score">Score: </string>
     <string name="play_score_initial">0</string>
     <string name="play_pause">Pause</string>
@@ -61,4 +61,7 @@
     2. Swing, drop, or shake the phone. Or, alternatively, click on the character.
     3. The effects will take place. Do not forget to turn up the volume to hear the audio effect!
     </string>
+    <string name="share_title2">Share this game...</string>
+    <string name="share_title3">Share Game</string>
+    <string name="share_file_location">Image saved to:</string>
 </resources>

@@ -1,10 +1,17 @@
 package umd.cmsc434.smashyourphone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.core.os.EnvironmentCompat;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -12,19 +19,31 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 public class PlayActivity extends AppCompatActivity {
 	private VideoView vid;
+	private ImageView vidPreview;
 	private VidCharPlayer vidCharPlayer = new VidCharPlayer();
 	private String resDir;
 	private ArrayList<String> vidPaths;
+	private ArrayList<Integer> vidPreviewIDs;
 	private int selectedChar;
 	
 	private int score = 0;
@@ -45,14 +64,23 @@ public class PlayActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_play);
 		
 		vid = findViewById(R.id.vid_char);
-		Intent intent = getIntent();
-		selectedChar = intent.getIntExtra("selected_char", 1);
+		vidPreview = findViewById(R.id.vw_char);
+		
+		vidPreviewIDs = new ArrayList<>();
+		vidPreviewIDs.add(R.drawable.ic_char_giraffe);
+		vidPreviewIDs.add(R.drawable.ic_char_marmot);
+		vidPreviewIDs.add(R.drawable.ic_char_emu);
+		
 		resDir = "android.resource://" + getPackageName() + "/";
 		vidPaths = new ArrayList<>();
 		vidPaths.add(resDir + R.raw.giraffe_yell);
 		vidPaths.add(resDir + R.raw.marmot_scream);
 		vidPaths.add(resDir + R.raw.emu_oof);
-
+		
+		Intent intent = getIntent();
+		selectedChar = intent.getIntExtra("selected_char", 1);
+		vidPreview.setImageResource(vidPreviewIDs.get(selectedChar));
+		vidPreview.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		vid.setVideoURI(Uri.parse(vidPaths.get(selectedChar)));
 		vid.setZOrderOnTop(true);
 		vid.requestFocus();
@@ -83,6 +111,47 @@ public class PlayActivity extends AppCompatActivity {
 	private void backToHomeActivity() {
 		Intent intent = new Intent(this, HomeActivity.class);
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		startActivity(intent);
+		setCustTransAnim();
+	}
+	
+	public void icShareClicked(View v) {
+		Uri uri = null;
+		try { uri = takeSnapshot(); } catch (Exception e) {e.printStackTrace();}
+		openShareActivity(uri);
+	}
+	
+	private Uri takeSnapshot() throws Exception {
+		ConstraintLayout layoutPlay = findViewById(R.id.layout_play);
+		Bitmap bitmap = Bitmap.createBitmap(layoutPlay.getWidth(), layoutPlay.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(bitmap);
+		canvas.drawColor(getResources().getColor(R.color.colorShareBG));
+		layoutPlay.draw(canvas);
+		
+		Calendar calendar = GregorianCalendar.getInstance();
+		Date date = calendar.getTime();
+		String imgName = "SmashYourPhone_" +
+										 	date.toString().replace(' ', '_').replace(':', '-') + ".jpg";
+		
+		String root = getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath();
+		Uri uri = Uri.parse(root);
+		File file = new File(uri.toString());
+		file.mkdirs();
+		uri = Uri.parse(root + File.separator + imgName);
+		file = new File(uri.toString());
+		file.createNewFile();
+		
+		FileOutputStream stream = new FileOutputStream(file);
+		bitmap.compress(Bitmap.CompressFormat.JPEG, 95, stream);
+		stream.flush();
+		stream.close();
+		
+		return uri;
+	}
+	
+	private void openShareActivity(Uri uri) {
+		Intent intent = new Intent(this, ShareActivity.class);
+		intent.putExtra("ImgUri", uri.toString());
 		startActivity(intent);
 		setCustTransAnim();
 	}
