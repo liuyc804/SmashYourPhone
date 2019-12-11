@@ -3,7 +3,7 @@
 A stress-relieving application (hi-fi interactive prototype).\
 Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
-## :tv: Youtube Video
+## :tv: Intro Video
 [link]\
 [intro]
 
