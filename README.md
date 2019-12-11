@@ -3,6 +3,8 @@
 A stress-relieving application (hi-fi interactive prototype).\
 Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
+## :tv: Youtube Video
+
 ## :thought_balloon: TODO's
 [ :laughing: All tasks are completed.]
 
