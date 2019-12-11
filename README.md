@@ -3,13 +3,14 @@
 A stress-relieving application (hi-fi interactive prototype).
 
 ## :thought_balloon: TODO's
-[ :laughing: All main tasks are completed.]
+[ :laughing: All tasks are completed.]
 
 ## :rofl: Latest Progress
-Implement sharing function.
-Create sharing interface.
+Improve sharing function.
 
 ## :joy: Past Progresses
+Implement sharing function.
+Create sharing interface.
 Support 2 more characters.
 Create about interface.
 Create about activity.
