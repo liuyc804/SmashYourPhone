@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.Calendar;
 import java.util.Date;
@@ -37,26 +38,34 @@ public class ShareActivity extends AppCompatActivity {
 		uri = Uri.parse(intent.getStringExtra("ImgUri"));
 		ImageView vwShare = findViewById(R.id.vw_share);
 		vwShare.setImageURI(uri);
-		try { takeSnapshotAgain(); } catch (Exception e) {}
 		TextView txtFileLoc = findViewById(R.id.txt_file_loc);
 		txtFileLoc.setText(getResources().getString(R.string.share_file_location) + " " + uri.toString());
+	}
+	
+	@Override
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		try { takeSnapshotAgain(); } catch (Exception e) {}
 	}
 	
 	private void takeSnapshotAgain() throws Exception {
 		ConstraintLayout layoutPlay = findViewById(R.id.layout_share);
 		Bitmap bitmap = Bitmap.createBitmap(layoutPlay.getWidth(), layoutPlay.getHeight(), Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
+		canvas.drawColor(getResources().getColor(R.color.colorShareBG));
 		layoutPlay.draw(canvas);
 		
-		ContentResolver resolver = getContentResolver();
+		File file = new File(uri.toString());
+		file.createNewFile();
 		
-		OutputStream stream = resolver.openOutputStream(uri);
+		FileOutputStream stream = new FileOutputStream(file);
 		bitmap.compress(Bitmap.CompressFormat.JPEG, 95, stream);
 		stream.flush();
 		stream.close();
 	}
 	
 	public void bnShareClicked(View v) {
+		try { takeSnapshotAgain(); } catch (Exception e) {}
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("image/*");
 		intent.putExtra(Intent.EXTRA_STREAM, uri);
