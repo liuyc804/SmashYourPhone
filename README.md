@@ -4,7 +4,7 @@ A stress-relieving application (~~hi-fi interactive prototype~~ functional Andro
 Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
 ## :tv: Intro Video
-[link]\
+[bad link]\
 [intro]
 
 ## :thought_balloon: TODO's
