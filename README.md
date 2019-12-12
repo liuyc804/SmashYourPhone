@@ -1,6 +1,6 @@
 # SmashYourPhone
 ### CMSC434 GA06
-A stress-relieving application (~~hi-fi interactive prototype~~ fully functional Android app).\
+A stress-relieving application (~~hi-fi interactive prototype~~ functional Android app).\
 Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
 ## :tv: Intro Video
