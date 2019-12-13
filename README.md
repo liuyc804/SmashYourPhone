@@ -5,7 +5,7 @@ Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
 ## :tv: Intro Video
 [temp link test - https://www.youtube.com/watch?v=RQLv67kg-HI&feature=youtu.be]\
-Our video is an overview of our SmashYourPhone application. We talk about why there is a need for this app, a historical look at our design process, and skit demonstrating our app's features. 
+Our video is an overview of our SmashYourPhone application. We talk about why there is a need for this app, a historical look at our design process, and a skit demonstrating our app's features. 
 
 ## :eye_speech_bubble: Logo
 ![Logo](https://repository-images.githubusercontent.com/222799540/0d7aaa80-1d30-11ea-9487-48d6072836f5)
