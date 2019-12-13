@@ -8,7 +8,7 @@ Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 [intro]
 
 ## :eye_speech_bubble: Logo
-![Logo](https://repository-images.githubusercontent.com/222799540/bfb07300-1d2c-11ea-82b2-30af90b243bf)
+![Logo](https://repository-images.githubusercontent.com/222799540/0d7aaa80-1d30-11ea-9487-48d6072836f5)
 
 ## :thought_balloon: TODO's
 [ :laughing: All tasks are completed.]
