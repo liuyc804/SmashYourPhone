@@ -7,6 +7,9 @@ Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 [temp link test - https://www.youtube.com/watch?v=RQLv67kg-HI&feature=youtu.be]\
 [intro]
 
+## :eye_speech_bubble: Logo
+![Logo](https://repository-images.githubusercontent.com/222799540/bfb07300-1d2c-11ea-82b2-30af90b243bf)
+
 ## :thought_balloon: TODO's
 [ :laughing: All tasks are completed.]
 
