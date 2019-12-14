@@ -4,7 +4,7 @@ A stress-relieving application (~~hi-fi interactive prototype~~ functional Andro
 Made by: Yucheng Liu, James Hoxie, Enver Rahman, Sabrina Zhou.
 
 ## :tv: Intro Video
-[![](http://img.youtube.com/vi/-L-GrRabNnw/0.jpg)](https://youtu.be/-L-GrRabNnw "Smash Your Phone Stress Relief") <br/>
+[![](https://youtu.be/-L-GrRabNnw)](https://youtu.be/-L-GrRabNnw "Smash Your Phone Stress Relief") <br/>
 
 Our video is an overview of our SmashYourPhone application. We talk about why there is a need for this app, a historical look at our design process, and a skit demonstrating our app's features. 
 
